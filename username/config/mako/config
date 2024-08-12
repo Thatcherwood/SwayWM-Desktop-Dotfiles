@@ -1,0 +1,16 @@
+
+font=noto-sans
+background-color=#1e1e2e
+text-color=#cdd6f4
+width=500
+height=200
+#outer-margin=20
+#border-size=2
+border-color=#89b4fa
+progress-color=over #313244
+default-timeout=30000
+
+[urgency=high]
+border-color=#fab387
+
+#vi: syntax=ini

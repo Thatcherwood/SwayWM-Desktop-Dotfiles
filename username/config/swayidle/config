@@ -1,0 +1,6 @@
+timeout 300 'swaylock'
+timeout 600 'swaymsg "output * dpms off"'
+timeout 6000 'systemctl suspend-then-hibernate'
+after-resume 'swaymsg "output * dpms on"'
+before-sleep 'swaylock -f'
+

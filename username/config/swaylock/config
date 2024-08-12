@@ -1,0 +1,12 @@
+daemonize
+#image=/path/to/your/image
+indicator-caps-lock
+font=Noto Serif
+font-size=60
+indicator-radius=200
+#inside-color=
+#insider-ver-color=
+#inside-wrong-color=
+#key-hl-color=
+#line-color=
+

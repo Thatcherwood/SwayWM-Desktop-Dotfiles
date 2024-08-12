@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 30,
+    "margin-left": 8,
+    "margin-right": 8,
+    "margin-botton": 4,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": [],
+    "modules-right": ["tray", "network", "temperature", "cpu", "memory", "keyboard-state", "wireplumber", "custom/microphone", "clock"],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "disable-click": false,
+        "sort-by-number": true
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "network": {
+        "format-wifi": "📶 {essid}",
+        "format-disconnected": "⚠ Disconnected",
+        "on-click": "networkmanager_dmenu"
+    },
+
+    "cpu": {
+        "format": "📟 {usage}%",
+        "on-click": "kitty htop"
+    },
+
+    "temperature": {
+        "critical-threshold": 75,
+        "format": "🌡️ {temperatureC}°C"
+    },
+
+    "memory": {
+        "format": "💽 {}%"
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "🔇",
+        "on-click": "/home/yourusername/.config/waybar/scripts/audio_changer.py",
+        "format-icons": {
+            "headphones": "🎧",
+            "default": ["🔈", "🔊"]
+        }
+
+        },
+    "custom/microphone": {
+        "exec": "/home/yourusername/.config/waybar/scripts/mute_status.sh",
+        "interval": 2,
+        "on-click": "/home/yourusername/.config/waybar/scripts/mute_mic.sh",
+        "on-scroll-up": "/home/yourusername/.config/waybar/scripts/mic_up.sh",
+        "on-scroll-down": "/home/yourusername/.config/waybar/scripts/mic_down.sh",
+        "on-click-right": "/home/yourusername/.config/waybar/scripts/microphone_changer.py",
+        "format-icons": {
+            "headphones": "🎧",
+            "default": ["🔈", "🔊"]
+        
+        }
+    },
+
+    "clock": {
+        "format": "{:%a %Y %b %d %R}"
+    }
+}
+
+vi: syntax=json
